@@ -147,6 +147,11 @@ public class HangmanManager {
      * Helper method that checks the exceptions for the {@code record} operation.
      *
      * @param guess the guess guessed by the user.
+     *
+     * @throws IllegalStateException if the number of guesses left is not at least 1
+     * @throws IllegalStateException if the dictionary is empty
+     * @throws IllegalArgumentException if the letter has already been guessed by the user
+     *
      * @since 1.0
      */
     private void checkExceptions(char guess) {
